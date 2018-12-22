@@ -87,15 +87,6 @@ public class TireTreeFilter {
         return builder.toString();
     }
 
-    public static void main(String[] argv) {
-        TireTreeFilter s = new TireTreeFilter();
-        s.addWord("共产");
-        s.addWord("共同");
-        s.addWord("家庭");
-        s.addWord("家人");
-        System.out.println(s.root);
-        System.out.print(s.filter("k共产党lsO(∩_∩)Odjflk共产j", "敏感词"));
-    }
 
 
 }
