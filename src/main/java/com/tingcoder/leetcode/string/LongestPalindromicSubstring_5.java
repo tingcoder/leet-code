@@ -9,7 +9,7 @@ public class LongestPalindromicSubstring_5 {
         LongestPalindromicSubstring_5 lps = new LongestPalindromicSubstring_5();
         System.out.println(lps.longestPalindrome("aaaa"));
     }
-    
+
     class Result {
         int sIdx = 0;
         int eIdx = 0;
