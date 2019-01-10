@@ -14,8 +14,7 @@ public class ExpressiveWords_809 {
         int idx;
         int count;
 
-        public CharIter(Character expChar,
-                        int idx) {
+        public CharIter(Character expChar, int idx) {
             this.curChar = expChar;
             this.idx = idx;
             this.count = 1;
