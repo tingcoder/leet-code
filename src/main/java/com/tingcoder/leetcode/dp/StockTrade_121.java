@@ -6,8 +6,7 @@ package com.tingcoder.leetcode.dp;
  * @date 2019-01-21 12:41
  */
 public class StockTrade_121 {
-    
-    public int maxProfit(int[] prices) {
+    public int maxProfit_1(int[] prices) {
         int maxProfile = 0;
         if (prices == null || prices.length == 0) {
             return maxProfile;
@@ -19,10 +18,23 @@ public class StockTrade_121 {
         for (int i = 0; i < len - 1; i++) {
             for (int j = i + 1; j < len; j++) {
                 int val = prices[j] - prices[i];
-                if (val > maxProfile){
+                if (val > maxProfile) {
                     maxProfile = val;
                 }
             }
+        }
+        return maxProfile;
+    }
+
+    public int maxProfit(int[] prices) {
+        int maxProfile = 0;
+        if (prices == null || prices.length == 0) {
+            return maxProfile;
+        }
+        int buy = Integer.MAX_VALUE;
+        for (int p : prices) {
+            buy = Math.min(buy, p);
+            maxProfile = Math.max(maxProfile, p - buy);
         }
         return maxProfile;
     }
