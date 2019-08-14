@@ -7,6 +7,7 @@ package com.tingcoder.leetcode.string;
 public class RemoveRemainOnce {
 
     public static void main(String[] args) {
+/*
 
         String str = "aaaabbbddeee";
         int len = str.length();
@@ -28,6 +29,7 @@ public class RemoveRemainOnce {
             }
         }
         System.out.println(new String(buffer));
+*/
 
         testMy();
     }
@@ -38,7 +40,24 @@ public class RemoveRemainOnce {
         String remove = "boy";
         System.out.println("input : " + input);
         System.out.println("output : " + rro.removeRemainOnce_2(input));
+
+        System.out.println("========");
+        System.out.println(rro.removeRemainOnce(new int[]{2,3,3,3,4,4,5}));
     }
+
+    public int removeRemainOnce(int[] input) {
+        int curVal = input[0];
+        int count = 1;
+        for (int i = 1; i < input.length; i++) {
+            int intVal = input[i];
+            if (intVal != curVal) {
+                input[count++] = intVal;
+                curVal = intVal;
+            }
+        }
+        return count;
+    }
+
 
     public String removeRemainOnce_2(String input) {
         StringBuilder buff = new StringBuilder();
