@@ -19,7 +19,7 @@
 		<jedis.version>3.0.0</jedis.version>
 		<!-- log4j -->
 		<slf4j-api.version>1.7.21</slf4j-api.version>
-		<log4j2.version>2.10.0</log4j2.version>
+		<log4j2.version>2.15.0</log4j2.version>
 	</properties>
 
 	<dependencies>
